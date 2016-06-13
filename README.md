@@ -7,9 +7,9 @@ This is my repository for the speed optimization for Udacity Course
 ## Review Files
 Since I have minified files for production I have saved the un-minified files in these locations.
 
-HTML - views/preBuild
-JS   - public/js/preBuild
-css  - public/css/preBuild
+HTML - views/preBuild  
+JS   - public/js/preBuild  
+css  - public/css/preBuild  
 
 ### Javascript Main.js changes
 * Refactored resizePizzas() took out determineDx which was causing a forced reflow and added changePizzaSizes() to the function.
