@@ -7,9 +7,9 @@ This is my repository for the speed optimization for Udacity Course
 ## Review Files
 Since I have minified files for production I have saved the un-minified files in these locations.
 
-HTML - views/preBuild  
-JS   - public/js/preBuild   
-css  - public/css/preBuild   
+HTML - views/preBuild
+JS   - public/js/preBuild
+css  - public/css/preBuild
 
 ### Javascript Main.js changes
 * Refactored resizePizzas() took out determineDx which was causing a forced reflow and added changePizzaSizes() to the function.
@@ -17,6 +17,8 @@ css  - public/css/preBuild
 * Refactored updatePositions() took out all variables that only needed to be calculated once out of the loop that changes .mover pizzas X axis.  Also created a loop to push all the 5 calculations that were repeating from the scrollTop calculation.  Then used a variable phaseCount to help repeat those 5 calucations inside the loop that moved the x axis of the pizzas.  Also used style.transform instead of style.left since that was causing a forced reflow.
 * I added a requestAnimationFrame to the event listener for 'scroll'.
 * Decreased the number of moving pizzas to 35 from 200 which wasn't needed.
+* Changed image used for moving pizzas to a smaller version since the size and height.  Also removed the height and width changes to movingPizzas and added those changes to the .moving class in pizzaStyle.css file.
+* Created a var for  document.querySelector("#movingPizzas1") instead of it being read every pass in loop in DOMContentLoaded event listener.
 
 ## How to run Site
 Either use Staging Site Link or run on LocalHost instructions below

@@ -33,6 +33,8 @@ form {
   position: fixed;
   width: 256px;
   z-index: -1;
+  width: 73.33px;
+  height: 100px;
 }
 
 .randomPizzaContainer {

@@ -553,6 +553,8 @@ window.addEventListener('scroll', function() {
   window.requestAnimationFrame(updatePositions);
 });
 
+var movingPizzasItem = document.querySelector("#movingPizzas1");
+
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
@@ -561,12 +563,10 @@ document.addEventListener('DOMContentLoaded', function() {
   for (var i = 0; i < 35; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
-    elem.src = "img/pizza.png";
-    elem.style.height = "100px";
-    elem.style.width = "73.333px";
+    elem.src = "img/moving.png";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    movingPizzasItem.appendChild(elem);
   }
   updatePositions();
 });
