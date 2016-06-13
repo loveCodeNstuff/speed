@@ -12,7 +12,7 @@ const config = {
         dest: 'public/css/'
     },
     scripts: {
-        src: ['public/js/**/*.js', 'app.js'],
+        src: ['public/js/preBuild/*.js'],
         bundle: 'custom.js',
         dest: 'public/js/',
     },
